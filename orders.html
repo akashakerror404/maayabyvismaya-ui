@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Orders — Maaya by Vismaya</title>
+  <link rel="icon" href="assets/img/brand/motif-brown.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="orders">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <nav class="crumbs"><a href="index.html">Home</a><span>/</span><a href="#">Account</a><span>/</span><span>My orders</span></nav>
+    <div class="account">
+      <aside class="acct-nav">
+        <div class="acct-nav__user"><span class="avatar">A</span><div><strong>Ananya Menon</strong><small>Member since 2025</small></div></div>
+        <a href="orders.html" class="is-active"><span data-icon="box"></span>My orders<em>4</em></a><a href="addresses.html" class=""><span data-icon="pin"></span>Addresses<em>3</em></a><a href="wishlist.html" class=""><span data-icon="heart"></span>Wishlist<em>5</em></a><a href="#" class=""><span data-icon="user"></span>Profile<em></em></a><a href="login.html" class=""><span data-icon="logout"></span>Sign out<em></em></a>
+      </aside>
+      <div>
+        <div class="acct-head"><div><span class="script" style="font-size:40px">hello, Ananya</span><h1>My orders</h1></div>
+          <div class="input-group" style="width:min(320px,100%)"><input class="input" placeholder="Search by order ID or product"><button data-icon="search" aria-label="Search"></button></div></div>
+        <div class="stat-row">
+          <div class="stat"><strong>8</strong><span>Orders placed</span></div>
+          <div class="stat" style="background:var(--blue-soft)"><strong>2</strong><span>On their way</span></div>
+          <div class="stat" style="background:var(--lynn)"><strong>₹1,240</strong><span>Saved with Maaya</span></div>
+        </div>
+        <div class="tabs" style="margin-bottom:24px;overflow-x:auto"><button class="is-active">All</button><button>Processing</button><button>Shipped</button><button>Delivered</button><button>Cancelled</button></div>
+        
+        <article class="order">
+          <div class="order__head">
+            <div><small>Order</small><b>#MBV-260392</b></div><div><small>Placed on</small>1 Nov 2026</div><div><small>Total</small>₹2,898</div>
+            <span class="status status--shipped">Shipped</span>
+          </div>
+          <div class="order__body"><div class="order__items"><div class="order__item"><img src="assets/img/products/earrings-01-1.jpg" alt=""><div><strong>Ashru Teardrop Hoops</strong>Gold · Qty 1 · ₹1,399</div></div><div class="order__item"><img src="assets/img/products/necklace-07-1.jpg" alt=""><div><strong>Panna Hexa Necklace</strong>Gold · Qty 1 · ₹1,499</div></div></div><div class="order__actions"><a class="btn btn--sm" href="#">Track order</a><a class="btn btn--ghost btn--sm" href="#" data-icon="invoice"> Invoice</a></div></div><div class="track"><span class="eyebrow">Track shipment</span><div class="track__line" style="--done:60%"><div class="track__step is-done"><i></i>Confirmed<small>1 Nov</small></div><div class="track__step is-done"><i></i>Packed<small>1 Nov</small></div><div class="track__step is-done"><i></i>Shipped<small>2 Nov</small></div><div class="track__step is-current"><i></i>Out for delivery<small>Today</small></div><div class="track__step "><i></i>Delivered<small>Expected 4 Nov</small></div></div><div class="track__info"><span>Courier: <b>Delhivery</b> · AWB 2849 1173 0042</span><a href="#" class="text-link">Track on Delhivery</a></div></div>
+        </article>
+        <article class="order">
+          <div class="order__head">
+            <div><small>Order</small><b>#MBV-260415</b></div><div><small>Placed on</small>3 Nov 2026</div><div><small>Total</small>₹4,046</div>
+            <span class="status status--processing">Processing</span>
+          </div>
+          <div class="order__body"><div class="order__items"><div class="order__item"><img src="assets/img/products/necklace-03-1.jpg" alt=""><div><strong>Halo Circle Necklace</strong>Gold · Qty 1 · ₹1,599</div></div><div class="order__item"><img src="assets/img/products/rings-05-1.jpg" alt=""><div><strong>Forever Band</strong>Silver · Size 7 · ₹899</div></div></div><div class="order__actions"><a class="btn btn--ghost btn--sm" href="#">Cancel order</a><a class="text-link hint" href="#" style="text-align:center">Need help?</a></div></div>
+        </article>
+        <article class="order">
+          <div class="order__head">
+            <div><small>Order</small><b>#MBV-260211</b></div><div><small>Placed on</small>18 Oct 2026</div><div><small>Total</small>₹1,199</div>
+            <span class="status status--delivered">Delivered</span>
+          </div>
+          <div class="order__body"><div class="order__items"><div class="order__item"><img src="assets/img/products/rings-01-1.jpg" alt=""><div><strong>Halo Solitaire Ring</strong>Gold · Size 6 · ₹1,199</div></div></div><div class="order__actions"><button class="btn btn--sm" data-add="r01">Buy again</button><a class="btn btn--ghost btn--sm" href="product.html?id=r01#reviews">Write a review</a><a class="text-link hint" href="#" style="text-align:center">Exchange item</a></div></div>
+        </article>
+        <article class="order">
+          <div class="order__head">
+            <div><small>Order</small><b>#MBV-260087</b></div><div><small>Placed on</small>2 Oct 2026</div><div><small>Total</small>₹2,798</div>
+            <span class="status status--delivered">Delivered</span>
+          </div>
+          <div class="order__body"><div class="order__items"><div class="order__item"><img src="assets/img/products/bracelets-06-1.jpg" alt=""><div><strong>Raat Starlit Hand Chain</strong>Gold · Qty 1 · ₹1,699</div></div><div class="order__item"><img src="assets/img/products/earrings-09-1.jpg" alt=""><div><strong>Tara Crystal Huggies</strong>Silver · Qty 1 · ₹1,099</div></div></div><div class="order__actions"><button class="btn btn--sm" data-add="h06">Buy again</button><a class="btn btn--ghost btn--sm" href="#" data-icon="invoice"> Invoice</a></div></div>
+        </article>
+        <article class="order">
+          <div class="order__head">
+            <div><small>Order</small><b>#MBV-259940</b></div><div><small>Placed on</small>21 Sep 2026</div><div><small>Total</small>₹1,999</div>
+            <span class="status status--cancelled">Cancelled</span>
+          </div>
+          <div class="order__body"><div class="order__items"><div class="order__item"><img src="assets/img/products/necklace-09-1.jpg" alt=""><div><strong>Goa Palm Pearl Necklace</strong>Gold · Qty 1 · ₹1,999</div></div></div><div class="order__actions"><span class="hint">Refunded to UPI on 23 Sep</span><button class="btn btn--ghost btn--sm" data-add="n09">Buy again</button></div></div>
+        </article>
+        <div class="center" style="margin-top:30px"><button class="btn btn--ghost">Load older orders</button></div>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

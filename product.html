@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product — Maaya by Vismaya</title>
+  <link rel="icon" href="assets/img/brand/motif-brown.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="product">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <nav class="crumbs"><a href="index.html">Home</a><span>/</span><a href="shop.html" id="pd-crumb-cat">Shop</a><span>/</span><span id="pd-crumb"></span></nav>
+
+    <section class="pdp">
+      <!-- GALLERY -->
+      <div class="gallery">
+        <div class="gallery__thumbs" id="pd-thumbs"></div>
+        <div class="gallery__main"><img id="pd-main" src="" alt=""><div class="p-card__tag" id="pd-tag"></div></div>
+      </div>
+
+      <!-- INFO -->
+      <div class="pdp-info">
+        <div class="pdp-info__top"><span class="eyebrow" id="pd-cat"></span><span class="rating" id="pd-rating"></span></div>
+        <h1 id="pd-name"></h1>
+        <div class="pdp-price" id="pd-price"></div>
+        <p class="tax-note">MRP inclusive of all taxes · or 3 interest-free payments with Razorpay EMI</p>
+        <p class="pdp-desc">A piece made to be lived in. Crafted in 316L surgical-grade stainless steel and finished with an 18K gold PVD coating that won't fade, tarnish or turn your skin green — wear it in the shower, at the gym, and on every ordinary day in between.</p>
+
+        <div class="opt">
+          <div class="opt__label">Finish <b id="pd-finish">Gold</b></div>
+          <div class="finish-opts">
+            <label><input type="radio" name="finish" value="Gold" checked><span><i class="swatch-dot swatch--gold"></i>18K Gold</span></label>
+            <label><input type="radio" name="finish" value="Silver"><span><i class="swatch-dot swatch--silver"></i>Silver</span></label>
+            <label><input type="radio" name="finish" value="Rose gold"><span><i class="swatch-dot swatch--rose"></i>Rose gold</span></label>
+          </div>
+        </div>
+
+        <div class="opt" id="pd-size">
+          <div class="opt__label">Ring size <b>US <span id="pd-size-val">7</span> · <a href="#" class="text-link">Size guide</a></b></div>
+          <div class="size-opts">
+            <label><input type="radio" name="size" value="5"><span>5</span></label>
+            <label><input type="radio" name="size" value="6"><span>6</span></label>
+            <label><input type="radio" name="size" value="7" checked><span>7</span></label>
+            <label><input type="radio" name="size" value="8"><span>8</span></label>
+            <label><input type="radio" name="size" value="9" disabled><span>9</span></label>
+            <label><input type="radio" name="size" value="Adj"><span>Adj.</span></label>
+          </div>
+        </div>
+
+        <div class="buy-row">
+          <div class="qty"><button data-step="-1" aria-label="Decrease">−</button><input id="pd-qty" value="1" aria-label="Quantity"><button data-step="1" aria-label="Increase">+</button></div>
+          <button class="btn" id="pd-add">Add to bag</button>
+          <button class="icon-btn" id="pd-wish" aria-label="Add to wishlist" data-icon="heart"></button>
+        </div>
+        <a href="checkout.html" class="btn btn--ghost btn--block">Buy it now</a>
+
+        <div class="pincode">
+          <div class="opt__label" style="margin:0">Check delivery</div>
+          <div class="pincode__row"><input placeholder="Enter pincode" value="682036" inputmode="numeric"><button id="pincode-check">Check</button></div>
+          <div class="pincode__ok" id="pincode-result"></div>
+        </div>
+
+        <div class="perks">
+          <div><span data-icon="drop"></span>Waterproof &amp; sweat-proof</div>
+          <div><span data-icon="sparkle"></span>Tarnish-free for years</div>
+          <div><span data-icon="gift"></span>Gift-ready packaging</div>
+        </div>
+
+        <div class="acc">
+          <details open>
+            <summary>Details</summary>
+            <div class="acc__body"><ul>
+              <li>316L stainless steel with 18K gold PVD coating</li>
+              <li>Nickel-free &amp; hypoallergenic</li>
+              <li id="pd-spec">Chain length 40 cm + 5 cm extender · Pendant 14 mm</li>
+              <li>Weight approx. 6 g</li>
+            </ul></div>
+          </details>
+          <details>
+            <summary>Care</summary>
+            <div class="acc__body"><p>Built to stay — but a little love goes a long way. Wipe with a soft cloth after wear, avoid harsh chemicals and store in your Maaya pouch to prevent scratches.</p></div>
+          </details>
+          <details>
+            <summary>Shipping &amp; returns</summary>
+            <div class="acc__body"><p>Free shipping across India on orders above ₹999. Dispatched within 24 hours, delivered in 3–6 working days. Easy 7-day exchange on unworn pieces with tags intact.</p></div>
+          </details>
+        </div>
+
+        <div style="margin-top:36px">
+          <div class="opt__label">Complete the look</div>
+          <div class="look" id="look"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:14px;flex-wrap:wrap">
+            <span>Set total <b id="look-total"></b></span>
+            <button class="btn btn--sm" id="look-add">Add set to bag</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews" style="border-top:1px solid var(--line)">
+      <div class="section-head"><div><span class="script">kind words</span><h2 class="display-m">Customer reviews</h2></div><button class="btn btn--ghost btn--sm">Write a review</button></div>
+      <div class="rv-summary">
+        <div>
+          <div class="rv-score">
+            <strong>4.9</strong><span class="stars">★★★★★</span>
+            <p class="hint" style="margin-top:6px">Based on 214 reviews</p>
+            <div class="bars">
+              <div><span>5★</span><i><b style="width:88%"></b></i><span>188</span></div>
+              <div><span>4★</span><i><b style="width:9%"></b></i><span>19</span></div>
+              <div><span>3★</span><i><b style="width:2%"></b></i><span>5</span></div>
+              <div><span>2★</span><i><b style="width:1%"></b></i><span>2</span></div>
+              <div><span>1★</span><i><b style="width:0%"></b></i><span>0</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-list">
+          <div class="rv-item"><div><h5>Aditi S.</h5><small>Pune · 12 Oct 2026</small><div class="verified" data-icon="check">Verified buyer</div></div><div><span class="stars">★★★★★</span><h4>Wore it to the pool. Still shining.</h4><p>I was sceptical about "waterproof" but I've worn this daily for three months now — swimming, showering, everything. Looks brand new.</p></div></div>
+          <div class="rv-item"><div><h5>Neha J.</h5><small>Kochi · 28 Sep 2026</small><div class="verified" data-icon="check">Verified buyer</div></div><div><span class="stars">★★★★★</span><h4>The packaging alone…</h4><p>Gifted this to my sister for her first job. The blue box, the leaf paper and the handwritten note — she called me in tears.</p></div></div>
+          <div class="rv-item"><div><h5>Fathima R.</h5><small>Kozhikode · 14 Sep 2026</small><div class="verified" data-icon="check">Verified buyer</div></div><div><span class="stars">★★★★☆</span><h4>Delicate and so pretty</h4><p>Lighter than I expected, which I love for everyday. Wish the chain had one more length option.</p></div></div>
+          <div style="padding-top:24px"><a href="#" class="link-line">Read all reviews</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="section" style="padding-top:0">
+      <div class="section-head"><div><span class="script">you may also love</span><h2 class="display-m">Pairs beautifully with</h2></div></div>
+      <div class="grid grid--4" id="related" data-limit="4"></div>
+    </section>
+  </main>
+
+  <div class="sticky-atc">
+    <div class="container">
+      <img id="sticky-img" src="" alt="">
+      <div><div class="sticky-atc__name" id="sticky-name"></div><span class="muted" id="sticky-price"></span></div>
+      <span class="hint hide-sm" style="margin-left:auto">Free shipping · 7-day exchange</span>
+      <button class="btn btn--sm" id="sticky-add" style="margin-left:16px">Add to bag</button>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

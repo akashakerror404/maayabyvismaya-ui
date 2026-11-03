@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Maaya by Vismaya</title>
+  <link rel="icon" href="assets/img/brand/motif-brown.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="checkout">
+
+  <header class="co-header"><div class="container">
+    <a href="cart.html" class="link-line" style="border:0"><span data-icon="back"></span><span class="hide-sm">Back to bag</span></a>
+    <a href="index.html"><img src="assets/img/brand/wordmark-brown.svg" alt="Maaya by Vismaya"></a>
+    <span class="co-secure"><span data-icon="lock"></span><span>Secure checkout</span></span>
+  </div></header>
+  <main class="container">
+    <ol class="steps">
+      <li class="is-done"><b>1</b><span>Bag</span></li><li class="sep"></li>
+      <li class="is-current"><b>2</b><span>Address &amp; delivery</span></li><li class="sep"></li>
+      <li><b>3</b><span>Payment</span></li>
+    </ol>
+    <div class="checkout">
+      <div>
+        <section class="co-block">
+          <div class="co-block__head"><h2><small>1</small>Contact</h2></div>
+          <div class="logged-as"><span class="avatar">A</span><div><b>Ananya Menon</b><br><span class="muted">ananya.menon@gmail.com · +91 98470 12345</span></div><a href="login.html" class="text-link hint" style="margin-left:auto">Not you?</a></div>
+          <label class="check" style="margin-top:14px;font-size:13px"><input type="checkbox" checked> Send me order updates on WhatsApp</label>
+        </section>
+
+        <section class="co-block">
+          <div class="co-block__head"><h2><small>2</small>Delivery address</h2><button class="link-line" data-addr-new>+ Add new</button></div>
+          <div class="addr-grid">
+            <div id="addr-list" style="display:contents"></div>
+            <button class="addr-add" type="button" data-addr-new><span>+</span>Add a new address</button>
+          </div>
+      <form class="addr-form" id="addr-form">
+        <h3>Add a new address</h3>
+        <a href="#" class="locate" id="addr-locate"><span data-icon="pin"></span>Use my current location</a>
+        <div class="form-grid">
+          <div class="field"><label>Full name <i>*</i></label><input class="input" name="name" required placeholder="Ananya Menon"></div>
+          <div class="field"><label>Mobile number <i>*</i></label><div class="input-prefix"><span>+91</span><input class="input" name="phone" required inputmode="tel" placeholder="98470 12345"></div></div>
+          <div class="field"><label>Pincode <i>*</i></label><input class="input" name="pin" required inputmode="numeric" maxlength="6" placeholder="682036"></div>
+          <div class="field"><label>City / District <i>*</i></label><input class="input" name="city" required placeholder="Kochi"></div>
+          <div class="field full"><label>Flat, house no., building <i>*</i></label><input class="input" name="line1" required placeholder="Flat 4B, Pearl Residency"></div>
+          <div class="field full"><label>Area, street, locality <i>*</i></label><input class="input" name="line2" required placeholder="Panampilly Nagar"></div>
+          <div class="field"><label>Landmark</label><input class="input" name="landmark" placeholder="Near Avenue Road"></div>
+          <div class="field field--select"><label>State <i>*</i></label><select name="state" required><option value="">Select state</option><option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option><option>Delhi</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Tamil Nadu</option><option>Telangana</option><option>Uttar Pradesh</option><option>West Bengal</option></select></div>
+          <div class="field full"><label>Save address as</label>
+            <div class="radio-pills">
+              <label><input type="radio" name="type" value="Home" checked><span>Home</span></label>
+              <label><input type="radio" name="type" value="Work"><span>Work</span></label>
+              <label><input type="radio" name="type" value="Other"><span>Other</span></label>
+            </div>
+          </div>
+          <label class="check full"><input type="checkbox" name="default"> Make this my default address</label>
+        </div>
+        <div class="addr-form__actions"><button class="btn">Save address</button><button type="button" class="btn btn--ghost" data-addr-cancel>Cancel</button></div>
+      </form>
+          <label class="check" style="margin-top:18px;font-size:13px"><input type="checkbox" checked> Billing address same as delivery address</label>
+        </section>
+
+        <section class="co-block">
+          <div class="co-block__head"><h2><small>3</small>Delivery method</h2></div>
+          <div class="opt-list">
+            <label class="opt-row"><input type="radio" name="ship" value="standard" checked><div class="opt-row__card"><div><div class="opt-row__title">Standard delivery</div><div class="opt-row__sub">3–6 working days · Arrives by Mon, 10 Nov</div></div><span class="opt-row__end">Free</span></div></label>
+            <label class="opt-row"><input type="radio" name="ship" value="express"><div class="opt-row__card"><div><div class="opt-row__title">Express delivery</div><div class="opt-row__sub">1–2 working days · Arrives by Thu, 6 Nov</div></div><span class="opt-row__end">₹149</span></div></label>
+          </div>
+        </section>
+
+        <section class="co-block" style="border-bottom:0">
+          <div class="co-block__head"><h2><small>4</small>Payment</h2></div>
+          <div class="opt-list">
+            <label class="opt-row"><input type="radio" name="pay" value="upi" checked>
+              <div class="opt-row__card"><div><div class="opt-row__title">UPI</div><div class="opt-row__sub">Google Pay, PhonePe, Paytm or any UPI app</div></div><span class="pay-logos"><span>UPI</span></span></div>
+              <div class="opt-row__extra">
+                <div class="upi-apps">
+                  <button type="button"><i style="background:linear-gradient(135deg,#4285f4,#34a853)"></i>Google Pay</button>
+                  <button type="button"><i style="background:#5f259f"></i>PhonePe</button>
+                  <button type="button"><i style="background:#00baf2"></i>Paytm</button>
+                </div>
+                <div class="field"><label>Or enter UPI ID</label><div class="input-group"><input class="input" placeholder="yourname@okhdfcbank"><button type="button" class="hint" style="width:auto;padding:0 16px">Verify</button></div></div>
+              </div>
+            </label>
+            <label class="opt-row"><input type="radio" name="pay" value="card">
+              <div class="opt-row__card"><div><div class="opt-row__title">Credit / Debit card</div><div class="opt-row__sub">Visa, Mastercard, RuPay, Amex</div></div><span class="pay-logos"><span>VISA</span><span>MC</span><span>RUPAY</span></span></div>
+              <div class="opt-row__extra"><div class="form-grid">
+                <div class="field full"><label>Card number</label><input class="input" placeholder="1234 5678 9012 3456" inputmode="numeric"></div>
+                <div class="field"><label>Expiry</label><input class="input" placeholder="MM / YY"></div>
+                <div class="field"><label>CVV</label><input class="input" placeholder="•••"></div>
+                <div class="field full"><label>Name on card</label><input class="input" placeholder="Ananya Menon"></div>
+              </div></div>
+            </label>
+            <label class="opt-row"><input type="radio" name="pay" value="nb">
+              <div class="opt-row__card"><div><div class="opt-row__title">Net banking</div><div class="opt-row__sub">All major Indian banks</div></div><span class="pay-logos"><span>HDFC</span><span>SBI</span><span>ICICI</span></span></div>
+              <div class="opt-row__extra"><div class="radio-pills"><label><input type="radio" name="bank" checked><span>HDFC</span></label><label><input type="radio" name="bank"><span>SBI</span></label><label><input type="radio" name="bank"><span>ICICI</span></label><label><input type="radio" name="bank"><span>Axis</span></label><label><input type="radio" name="bank"><span>Kotak</span></label><label><input type="radio" name="bank"><span>Federal</span></label></div></div>
+            </label>
+            <label class="opt-row"><input type="radio" name="pay" value="cod">
+              <div class="opt-row__card"><div><div class="opt-row__title">Cash on delivery</div><div class="opt-row__sub">Pay when your order arrives</div></div><span class="opt-row__end">+ ₹49</span></div>
+            </label>
+          </div>
+          <div class="razorpay-note"><span data-icon="shield"></span><span>Payments are 100% secure and processed by <b>Razorpay</b>. We never store your card details.</span></div>
+        </section>
+      </div>
+
+      <aside class="summary">
+        <h3>In your bag</h3>
+        <div class="co-items" id="co-items"></div>
+        <div id="co-totals"></div>
+        <a href="order-success.html" class="btn btn--block" id="pay-btn" style="margin-top:20px">Pay</a>
+        <div class="deliver-to" id="co-deliver"></div>
+        <p class="hint center" style="margin-top:16px">By placing this order you agree to our <a href="#" class="text-link">Terms</a> &amp; <a href="#" class="text-link">Privacy policy</a>.</p>
+      </aside>
+    </div>
+  </main>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

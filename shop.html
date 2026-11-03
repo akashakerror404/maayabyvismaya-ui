@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop All — Maaya by Vismaya</title>
+  <link rel="icon" href="assets/img/brand/motif-brown.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="shop">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="plp-hero">
+      <div class="plp-hero__copy">
+        <nav class="crumbs" style="padding-top:0"><a href="index.html">Home</a><span>/</span><a href="shop.html">Shop</a><span>/</span><span id="plp-crumb">All jewellery</span></nav>
+        <span class="script" id="plp-script">everything, everyday</span>
+        <h1 class="display-l" id="plp-title">All Jewellery</h1>
+        <p>Stainless steel, 18K gold PVD, made to be lived in. Every piece is waterproof, tarnish-free and gentle on skin.</p>
+      </div>
+      <div class="plp-hero__media"><img id="plp-hero-img" src="assets/img/products/necklace-02-2.jpg" alt=""></div>
+    </section>
+
+    <div class="container">
+      <div class="subcats" id="subcats"></div>
+
+      <div class="plp">
+        <!-- FILTERS -->
+        <aside class="filters">
+          <div class="filters__head"><h3>Filter</h3><button class="text-link hint">Clear all</button></div>
+          <details class="filter-group" open>
+            <summary>Price</summary>
+            <div class="filter-group__body range">
+              <div class="range__track"><div class="range__fill"></div></div>
+              <div class="range__vals"><input value="₹799"><span>–</span><input value="₹1,999"></div>
+            </div>
+          </details>
+          <details class="filter-group" open>
+            <summary>Finish</summary>
+            <div class="filter-group__body swatch-row">
+              <label><input type="checkbox" checked><i class="swatch-dot swatch--gold"></i>Gold</label>
+              <label><input type="checkbox"><i class="swatch-dot swatch--silver"></i>Silver</label>
+              <label><input type="checkbox"><i class="swatch-dot swatch--rose"></i>Rose</label>
+            </div>
+          </details>
+          <details class="filter-group" open>
+            <summary>Style</summary>
+            <div class="filter-group__body">
+              <label class="check"><input type="checkbox">Minimal <em>18</em></label>
+              <label class="check"><input type="checkbox" checked>Crystal <em>12</em></label>
+              <label class="check"><input type="checkbox">Pearl <em>6</em></label>
+              <label class="check"><input type="checkbox">Statement <em>9</em></label>
+              <label class="check"><input type="checkbox">Layering <em>7</em></label>
+            </div>
+          </details>
+          <details class="filter-group">
+            <summary>Occasion</summary>
+            <div class="filter-group__body">
+              <label class="check"><input type="checkbox">Everyday <em>24</em></label>
+              <label class="check"><input type="checkbox">Workwear <em>15</em></label>
+              <label class="check"><input type="checkbox">Festive <em>8</em></label>
+              <label class="check"><input type="checkbox">Gifting <em>20</em></label>
+            </div>
+          </details>
+          <details class="filter-group">
+            <summary>Availability</summary>
+            <div class="filter-group__body">
+              <label class="check"><input type="checkbox" checked>In stock <em>38</em></label>
+              <label class="check"><input type="checkbox">Pre-order <em>2</em></label>
+            </div>
+          </details>
+          <div style="margin-top:28px;padding:22px;background:var(--lynn)">
+            <span class="script" style="font-size:32px">need help?</span>
+            <p style="font-size:13px;margin:6px 0 14px" class="muted">Chat with our stylist on WhatsApp for sizing and gifting ideas.</p>
+            <a href="#" class="link-line">Chat now</a>
+          </div>
+        </aside>
+
+        <!-- RESULTS -->
+        <div>
+          <div class="toolbar">
+            <div class="toolbar__left">
+              <button class="chip filter-btn" data-open="filter-drawer" data-icon="filter">Filter</button>
+              <span class="muted" id="plp-count"></span>
+            </div>
+            <div class="toolbar__right">
+              <div class="select"><select id="sort" aria-label="Sort">
+                <option value="featured">Sort: Featured</option>
+                <option value="new">Newest</option>
+                <option value="rated">Top rated</option>
+                <option value="low">Price: low to high</option>
+                <option value="high">Price: high to low</option>
+              </select></div>
+              <div class="view-toggle">
+                <button class="is-active" data-cols="grid--3" aria-label="3 columns" data-icon="grid3"></button>
+                <button data-cols="grid--4" aria-label="4 columns" data-icon="grid4"></button>
+              </div>
+            </div>
+          </div>
+          <div class="active-filters">
+            <span class="muted">Applied:</span>
+            <button class="chip chip--sm">Gold <span data-icon="close"></span></button>
+            <button class="chip chip--sm">Crystal <span data-icon="close"></span></button>
+            <button class="chip chip--sm">₹799 – ₹1,999 <span data-icon="close"></span></button>
+            <button class="text-link hint">Clear all</button>
+          </div>
+          <div class="grid grid--3" id="plp-grid"></div>
+          <div class="pagination">
+            <span id="plp-shown"></span>
+            <div class="progress"><span id="plp-progress"></span></div>
+            <button class="btn btn--ghost">Load more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile filter drawer -->
+    <div class="drawer drawer--right" id="filter-drawer">
+      <div class="drawer__scrim" data-close></div>
+      <aside class="drawer__panel">
+        <div class="drawer__head"><h3 class="display-s">Filter &amp; sort</h3><button data-close aria-label="Close" data-icon="close"></button></div>
+        <div style="padding:0 24px" id="filter-drawer-body"></div>
+        <div style="padding:24px;margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px solid var(--line)">
+          <button class="btn btn--ghost btn--sm">Clear</button><button class="btn btn--sm" data-close>Show results</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
